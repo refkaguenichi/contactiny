@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  node_backend:
+    container_name: contactiny-api
+    image: contactiny-api:0.0.1
+    build:
+      context: ./api
+    ports:
+      - "3000:3000"
+    environment:
+      - EXTERNAL_PORT=3000
